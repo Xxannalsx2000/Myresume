@@ -1,0 +1,898 @@
+
+.wrap{
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid #000;
+}
+.header{  
+    width: 100%;
+    position: absolute;
+    top:0;
+    right: 0;
+    left: 0;
+    display: flex;  
+    z-index: 100;
+    opacity: 0.8;
+    justify-content: space-between;
+    background-color: black;
+    padding:20px 20px;
+}
+
+.header a:hover{
+    color: #A09E9E;
+}
+.logo{
+    margin: auto 0;
+}
+.logo a{
+    background-image:url('../images/logo_w@svg.svg') ;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: block;
+    width: 120px;
+    height: 30px;
+    text-indent:101%; /*首行縮排*/
+    overflow:hidden; /*自動隱藏超出的文字或圖片*/
+    white-space:nowrap; /*希望元素在第一排上面，沒有斷行*/
+}
+.menu{
+    display: flex;
+}
+.menu a{
+    color: white;
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+.hambuger-menu {
+    display:none;
+    height: 50px;
+    width: 50px;
+    background:url('https://cdn-icons-png.flaticon.com/512/6015/6015685.png') no-repeat ;
+    background-color: #fff;
+    background-size: contain;
+    text-indent:101%; /*首行縮排*/
+    overflow:hidden; /*自動隱藏超出的文字或圖片*/
+    white-space:nowrap; /*希望元素在第一排上面，沒有斷行*/
+
+}
+
+.header .active{
+    height: 200px;
+}
+@media(max-width:576px){
+    .header{
+        position: fixed;
+        top: 0;
+        padding: 10px 10px;
+    }
+    .menu {
+        position: absolute;
+        top:100%;
+        left:0 ;
+        right:0;
+        display: block;
+        height:0;
+        overflow: hidden;
+        transition:height,0.8s;
+    }
+    .menu a{
+        border: 1px solid #fff;
+        padding: 10px 0;
+        background-color: #000;
+
+    }
+    .hambuger-menu{
+        display: block;
+    }
+ }
+ 
+/* banner start */
+.banner{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    background: url('../images/header_desktop.png'),no-repeat;
+    max-width: 100%;
+    height: 450px;
+}
+
+.banner-text{
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+    text-align: center; 
+    width: 100%;
+    padding: 30px 5px;
+
+}
+
+.banner-text h2{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.banner-text p {
+    font-size: 18px;
+    line-height: 150%;
+}
+
+@media(max-width:576px){
+    .banner{
+        background:url(../images/header_mobile.png);
+    }
+    .banner-text h2{
+        font-size: 30px;
+    }
+}
+/* banner end */
+
+.content{
+    width: 100%;
+    background-color: #EFE9E7;
+}
+
+.news{
+    width: 100%;
+    padding: 50px 62px;
+}
+.news h3{
+    color: #3d1101;
+    font-size: 25px;
+    line-height: 120%;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+@media(max-width:768px){
+    .news{
+        padding: 20px 10px;
+        overflow: hidden;
+    }
+}
+@media(max-width:576px){
+    .news h3::before,.news h3::after{
+        content: none;
+    }
+ }
+/* h3   旁邊灰色線 start */
+.news h3::before,.news h3::after{
+    content: "";
+    position: absolute;
+    background-color:rgb(189, 188, 188);
+    height: 3px;
+    width: 200px;
+    top:25px
+}
+.news h3::before{
+    left: 100px;
+}
+.news h3::after{
+    right:100px;  
+}
+/* h3   旁邊灰色線 end */
+
+.news-feature{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+.news-feature h4{
+    color: #3d1101;
+    font-size: 18px;
+    margin: 15px 0;
+}
+.news-feature p {
+    font-size: 16px;
+}
+.news-feature li {
+    width: 33.33333%;
+    padding: 0 25px;
+}
+.news p{
+    text-align: left;
+}
+.news-feature li img{
+    border-radius: 50%;
+}
+@media(max-width:768px){
+
+}
+
+@media(max-width:576px){
+    .news-feature{
+        display: block;
+    }
+    .news-feature li{
+        margin: 0 auto;
+        width: 90%;
+        padding: 30px 50px;
+    }
+    .news-feature h4{
+        font-size: 20px;
+    }
+    .news-feature p {
+        font-size: 18px;
+    }
+    .news h3::before,.news h3::after{
+        content: none;
+    }
+}
+@media(max-width:280px){
+    .news-feature{
+        display: block;
+    }
+    .news-feature li{
+        margin: 0 auto;
+        width: 100%;
+        padding: 30px 0;
+    }
+}
+/* 主廚 start */
+.chef{
+    
+    width: 100%;
+    background-color: #3D1101;
+    display: flex;
+    color: white;
+    padding:  0 42px;
+}
+
+
+.chef img {
+    width: 100%;
+}
+
+.chef-text h3{
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+.chef-text{
+    padding: 80px 35px;
+}
+.chef-text p{
+    font-size: 16px;
+}
+
+@media(max-width:768px){
+    .chef{
+        padding: 0 0;
+    }
+
+}
+@media(max-width:576px){
+    .chef{
+        padding: 0 0;
+        display: block;
+    }
+
+ }
+ @media(max-width:280px){
+    .chef-text{
+        padding: 10px 10px;
+    }
+    .chef-text p {
+        display: none;
+    }
+    .chef-text h3 {
+        text-align: center;
+    }
+
+ }
+/* feedback  start*/
+.feedback{
+    width: 100%;
+    background-color: #EFE9E7;
+    color: #3d1101;
+    text-align: center;
+    padding: 50px 42px;
+}
+.feedback img{
+    border-radius: 50%;
+}
+.feedback h3{
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+.feedback-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback-item >li{
+    padding-left: 20px;
+    width: 33.33333%;
+}
+
+.avatar {
+    display: flex;
+    text-align: left;
+}
+.avatar p{
+    font-size: 16px;
+}
+
+.avatar h4{
+    font-size: 18px;
+    margin-bottom: 22px;
+}
+.avatar img{
+    
+    width: 67px;
+}
+.avatar-img{
+    margin-right: 13px;
+    width: 20%;
+}
+.avatar-text{
+    margin-top: 16px;
+    width: 80%;
+}
+.avatar-text-end{
+    text-align: right;
+    color:rgba(61,17,1,0.75);
+}
+@media(max-width:576px){
+    .feedback-item >li{
+        padding:  0 0;
+    }
+    .feedback-item{
+        display: block;
+    }
+    .avatar{
+        width:300%;
+    }
+}
+@media(max-width:576px){
+    .feedback{
+        padding: 10px 10px;
+    }
+}
+/* feedback end */
+
+
+/* reservation start */
+.reservation{
+    width: 100%;
+    padding: 50px 42px;
+}
+.reservation h3{
+    font-size: 24px;
+    text-align: center;
+    line-height: 28px;
+    color: #431101;
+    margin-bottom: 38px;
+}
+
+.reservation-content{
+    display: flex;
+}
+@media(max-width:768px){
+    .reservation{
+        padding: 20px 20px;
+    }
+    
+ }
+@media(max-width:576px){
+    .reservation-content{
+        display: block;
+    }
+
+ }
+.formtext{
+    width: 100%;
+    color: #431101;
+    padding-left: 20px;
+}
+.formtext input{
+    margin-top:6px;
+    margin-bottom: 20px;
+}
+/* 是否需要素食文字marginbottom */
+.formweight{
+    display: block;
+    margin-bottom:8px;
+}
+.typedata{
+    width: 100%;
+}
+/* 表單按鈕屬性start */
+.forbutton{
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+.formbut ,.formcel{
+    background-color: #F56C23;
+    border-radius: 10%;
+    border-color: #fff; 
+    color: #fff;
+    width: 70px;
+    height: 32px;
+}
+
+.formbut{
+    background-color: #F56C23;
+}
+.formcel {
+    background-color: #A09E9E;
+}
+.formbut:hover,.formcel:hover{
+    background-color:#3D1101;
+    color: white;
+}
+@media(max-width:576px){
+    .formtext{
+        padding-left: 0; 
+    }
+}
+/* 表單按鈕屬性end*/
+
+
+/* login page頁面 start  */
+
+.loginpage{
+    width: 100%;
+    padding: 50px 0;
+}
+
+.loginpage-squ h3{
+    text-align: center;
+    font-weight:bold;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+.Email-passsword,.Email-Address{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+}
+
+.Email-Address{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* email icon start */
+.fa-envelope{
+    position: absolute;
+    top: 23px;
+    left: 10px;
+}
+/* email icon end */
+/* email icon start */
+.fa-lock{
+    position: absolute;
+    left: 10px;
+    top: 83px;
+}
+/* email icon end */
+.Email-passsword{
+    width: 100%;
+}
+.loginpage-squ{
+    margin: 0 auto;
+    text-align: left;
+    width: 30%;
+    border-top:3px solid #FF5E45 ;
+    padding: 15px 15px;
+    box-shadow: 5px 5px 5px gray;
+}
+.loginpage-squ form{
+    position: relative;
+    font-size: 16px;
+}
+.loginpage-squ a{
+    text-decoration: none ;
+    color: #FF5E45;
+}
+.loginpage h2,.loginpage p{
+    text-align: center;
+    color: #3D1101 ;
+}
+.loginpage h2{
+    font-weight:bold;
+    font-size: 48px;
+}
+.loginpage p{
+    margin-bottom: 35px;
+    font-size: 20px;
+}
+.loginpage-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.register-button:hover,.login-button:hover {
+    background-color:#3D1101;
+    color: white;
+}
+.register-button,.login-button{
+    border-radius: 4px;
+    font-size: 14px;
+    color: #fff;
+    width: 120px;
+    height: 30px;
+}
+.register-button{
+    background-color: gray;
+}
+.login-button{
+    background-color:  #F56C23;
+}
+@media(max-width:768px){
+    .loginpage-squ{
+        width: 50%;
+    }
+    .register-button,.login-button{
+        width: 130px;
+    }
+}
+@media(max-width:576px){
+    .loginpage-squ{
+        width: 60%;
+    }
+    .register-button,.login-button{
+        width: 140px;
+    }
+}
+/* login page頁面 end */
+
+
+
+/* food menu start */
+.food-menu{
+    overflow: hidden;
+    display: flex;
+    padding-top: 48px;
+    padding-left:42px ;
+    padding-right:42px;
+}
+.food-menu-tiitle{
+    width: 25%;
+    padding-right: 20px;
+}
+.food-menu-tiitle p{
+ font-size: 16px;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ padding-left: 8px;
+ border-bottom: 1px solid #3D1101 ;
+}
+.food-menu-tiitle p:hover{
+    background-color: #3d1101;
+    color: #fff;
+}
+.food-menu-tiitle h2{
+    display: inline-block;
+    padding-bottom: 16px;
+    font-size: 20px;
+}
+.fa-leaf{
+    display: block;
+    font-size: 26px;
+}
+.titalicon{
+    width: 65%;
+    position: relative;
+}
+/* 搜索bar */
+.searchbar{
+    border: 2px solid #5b1d06;
+    width: 100%;    
+    height: 130%;
+}
+/* 搜索旁放大鏡 */
+.fa-magnifying-glass{
+    position: absolute;
+    display: inline-block;
+    right: 1px;
+    top: 1px;
+    color: #fff;
+    padding: 3px;
+    background-color: #3D1101;
+    font-size: 20px;
+
+}
+/* 左邊選單start */
+.food-menu-content-bar{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 21px;
+}
+.food-menu-content-icon{
+    display: flex;
+}
+.food-menu-content-icon p {
+    padding-right: 12px;
+    padding-left: 80px;
+    border-right: 1px solid #000;
+    margin: auto 0;
+}
+
+/* 右邊選單start */
+
+.food-menu-content-icon i {
+    font-size: 20px;
+    padding: 0 17px;
+}
+.food-menu-content-main{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-top: 26px;
+}
+/* 選單內的樣式 */
+.food-menu-content-main h4{
+    font-size: 20px;
+    margin: 2px;
+}
+.food-menu-content-main h5{
+    font-family: fantasy ;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+.food-menu-content-main p{
+    font-size: 20px;
+}
+.food-menu-content-main img{
+    height: 120px;
+    width: 100%;
+}
+.addshopcar{
+    margin-top: 16px;
+    padding: 3px 45px;
+    border: 3px solid #FF5E45;
+}
+.addshopcar:hover{
+    color:#fff;
+    background-color: #3D1101 ;
+}
+.addshopcar p{
+    font-size: 16px;
+    display: inline-block;
+
+}
+.menu-content-main-text{
+    padding: 10px 10px;
+}
+/* 漢堡選單裡的小線 */
+.line {
+    width: 50%;
+    margin: 0 auto;
+    border-bottom: 2px solid #000;
+    margin-bottom: 20px;
+}
+
+.classicbugger,.handsomebugger,.brotherbugger,.perfectbugger{
+    width: 30%;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    box-shadow: 3px 3px 10px gray ;
+    position: relative;
+}
+/* 漢堡上的小緞帶 */
+.ribbon-wrap{
+    width: 106px;
+    height: 108px;
+    overflow: hidden;
+    position: absolute;
+    top: -3px;
+    left: 135px;
+}
+.ribbon {
+    z-index: 100;
+    position: relative;
+    left: -11px;
+    top: 26px;
+    width: 148px;
+    background-color: #00CC99 ;
+    color: #fff;
+    padding: 5px 0;
+    text-align: center;
+    transform: rotate(45deg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.ribbon:before {
+    content: "";
+    border-top: 4px solid #795548;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+.ribbon:after {
+    content: "";
+    border-top: 4px solid #795548;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+}
+/* 小緞帶end */
+/* 漢堡圖片上愛心 */
+.fa-heart{
+    z-index: 100;
+    color: white;
+    font-size: 30px;
+    top :10px;
+    left: 10px;
+    position: absolute;
+}
+
+
+@media(max-width:768px){
+    .food-menu-content{
+        width: 80%;
+    }
+
+    .searchbar{
+        height: 128%;
+    }
+    .food-menu-content-icon p {
+        padding-left: 56px;
+    }
+    .classicbugger,.handsomebugger,.brotherbugger,.perfectbugger{
+       width: 40%;
+    }
+   
+    .addshopcar p{
+        font-size: 13px;
+    }
+}
+
+
+@media(max-width:576px){
+   .food-menu{
+    display: block;
+   }
+   .food-menu-tiitle{
+    width: 100%;
+    padding-right: 0px;
+   }
+   .food-menu-tiitle p {
+    font-size: 25px;
+   }
+   .food-menu-content-main{
+    display: block;
+   }
+   .food-menu-content{
+    margin: 0 auto;
+    width: 100%;
+   }
+   .titalicon{
+    width: 100%;
+   }
+
+   .food-menu-content-bar{
+    width: 100%;
+    padding-top: 20px;
+    display: block;
+    padding-right: 0px;
+   }
+   .searchbar{
+    height: 29px;
+   }
+    .food-menu-content-icon{
+    justify-content: flex-end;
+    margin-top: 15px;
+   }
+   .food-menu-content-icon i{
+    padding-right: 0px;
+   }
+  
+.classicbugger,.handsomebugger,.brotherbugger,.perfectbugger{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 60%;
+ }
+ .addshopcar{
+    padding: 0 0;
+ }
+ .addshopcar p{
+    font-size: 21px;
+ }
+}
+@media(max-width:375px){
+
+
+    .classicbugger,.handsomebugger,.brotherbugger,.perfectbugger{
+        width: 80%;
+        margin: 0 auto;
+     }
+
+}
+
+/* food menu end */
+.footer{
+    overflow: hidden;
+    background-color: #EFE9E7;
+    padding: 50px 43px;
+    width: 100%;
+    display: flex;
+}
+
+.footer a ,.footer p ,footer h3,.about-restaurant p,
+.about-restaurant h3,.footer-connection h3{
+    text-decoration: none;
+    color: #3D1101;
+}
+.about-restaurant ,.footer-connection,.footer-icon{
+    margin-right: 21px;
+    width: 33.333333%;
+}
+.about-restaurant h3,.footer-connection h3{
+    margin-bottom: 16px;
+
+}
+.footer-connection ul{
+    margin: 15px;
+
+}
+.footer-connection li{
+    list-style: square;
+}
+.footer h3{
+    font-size: 24px;
+}
+
+.footer-icon{
+    text-align: right;
+}
+
+.footer-icon h3 {
+    display: block;
+    font-size: 49px;
+    font-weight:bold;
+    text-decoration: none;
+    margin-bottom: 22px;
+}
+
+/* icon連結 start */
+.footer-icon-ul{
+    display: flex;
+    justify-content: flex-end;
+}
+.footer-icon-ul li{
+    margin-right: 12px;
+}
+.footer-icon li a{
+    display: block;
+    width: 31px;
+    height: 31px;
+    text-indent:101%; /*首行縮排*/
+    overflow:hidden; /*自動隱藏超出的文字或圖片*/
+    white-space:nowrap; /*希望元素在第一排上面，沒有斷行*/
+}
+.google-icon a{
+    background-image: url('../images/google.png');
+}
+.twitter-icon a{
+    background-image: url('../images/twitter.png');
+}
+.facebook-icon a{
+    background: url('../images/facebook.png');
+}
+/* icon連結 end */
+
+@media(max-width:768px){
+    .footer{
+        display: block;
+        padding: 50px 10px;
+    }
+    .about-restaurant ,.footer-connection,.footer-icon{
+        margin-right: 21px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+ }
