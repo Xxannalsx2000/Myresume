@@ -241,7 +241,7 @@
 
 .content{
     width: 100%;
-    background-color: #e8eceb;
+    background-color: #E9EBEB;
     letter-spacing: 0.2em;
 }
 
@@ -249,6 +249,7 @@
     width: 100%;
     padding: 50px 62px;
     display: block;
+    background-color: #E9EBEB;
 }
 .news h3{
     color: #3d1101;
@@ -797,6 +798,7 @@
 
 }
 .menu-content-main-text{
+    background-color: #ffffff ;
     padding: 10px 10px;
 }
 /* 漢堡選單裡的小線 */
