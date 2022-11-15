@@ -41,7 +41,7 @@
     display: flex;
 }
 .menu a{
-    color: white;
+    color: #e8eceb;
     display: block;
     font-size: 16px;
     text-align: center;
@@ -53,7 +53,7 @@
     height: 50px;
     width: 50px;
     background:url('https://cdn-icons-png.flaticon.com/512/6015/6015685.png') no-repeat ;
-    background-color: #fff;
+    background-color: #e8eceb;
     background-size: contain;
     text-indent:101%; /*首行縮排*/
     overflow:hidden; /*自動隱藏超出的文字或圖片*/
@@ -142,7 +142,7 @@
 
 .content{
     width: 100%;
-    background-color: #efede7;
+    background-color: #e8eceb;
     letter-spacing: 0.2em;
 }
 
@@ -178,7 +178,7 @@
     background-color:rgb(189, 188, 188);
     height: 3px;
     width: 200px;
-    top:25px
+    top:20px
 }
 .news h3::before{
     left: 100px;
@@ -195,8 +195,9 @@
 }
 .news-feature h4{
     color: #3d1101;
-    font-size: 18px;
+    font-size: 20px;
     margin: 15px 0;
+    font-weight:bold;
 }
 .news-feature p {
     font-size: 16px;
@@ -247,19 +248,20 @@
 /* autobiography start */
 .autobiography{
     width: 100%;
-    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    background-image: linear-gradient(-60deg, #2D3E4E 0%, #2D3E4E 100%);
     display: flex;
-    color: white;
-    padding:  0 42px;
+    color: #e8eceb;
+    padding:  0 50px;
 }
 
 
 .autobiography img {
-    height: 427px;
+    height: 250px;
 }
 
 .autobiography-text h3{
     font-size: 20px;
+    margin-top: 4px;
     margin-bottom: 8px;
     font-weight:bold;
 
@@ -300,7 +302,7 @@
 /* feedback  start*/
 .feedback{
     width: 100%;
-    background-color: #EFE9E7;
+    background-color: #e8eceb;
     color: #3d1101;
     text-align: center;
     padding: 50px 42px;
@@ -423,8 +425,8 @@
 .formbut ,.formcel{
     background-color: #F56C23;
     border-radius: 10%;
-    border-color: #fff; 
-    color: #fff;
+    border-color: #e8eceb; 
+    color: #e8eceb;
     width: 70px;
     height: 32px;
 }
@@ -437,7 +439,7 @@
 }
 .formbut:hover,.formcel:hover{
     background-color:#3D1101;
-    color: white;
+    color: #e8eceb;
 }
 @media(max-width:576px){
     .formtext{
@@ -523,12 +525,12 @@
 }
 .register-button:hover,.login-button:hover {
     background-color:#3D1101;
-    color: white;
+    color: #e8eceb;
 }
 .register-button,.login-button{
     border-radius: 4px;
     font-size: 14px;
-    color: #fff;
+    color: #e8eceb;
     width: 120px;
     height: 30px;
 }
@@ -579,7 +581,7 @@
 }
 .food-menu-tiitle p:hover{
     background-color: #3d1101;
-    color: #fff;
+    color: #e8eceb;
 }
 .food-menu-tiitle h2{
     display: inline-block;
@@ -606,7 +608,7 @@
     display: inline-block;
     right: 1px;
     top: 1px;
-    color: #fff;
+    color:#e8eceb;
     padding: 3px;
     background-color: #3D1101;
     font-size: 20px;
@@ -828,8 +830,8 @@
 /* food menu end */
 .footer{
     overflow: hidden;
-    background-color: #EFE9E7;
-    padding: 50px 43px;
+    background-color: #070707;
+    padding: 50px 50px;
     width: 100%;
     display: flex;
 }
@@ -837,7 +839,7 @@
 .footer a ,.footer p ,footer h3,.about-restaurant p,
 .about-restaurant h3,.footer-connection h3{
     text-decoration: none;
-    color: #3D1101;
+    color: #e8eceb;
 }
 .about-restaurant ,.footer-connection,.footer-icon{
     margin-right: 21px;
